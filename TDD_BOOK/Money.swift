@@ -14,6 +14,10 @@ class Money {
     init(amount: Int) {
         self.amount = amount
     }
+
+    static func doller(amount: Int) -> Doller {
+        return Doller(amount: amount)
+    }
 }
 
 extension Money: Equatable {
