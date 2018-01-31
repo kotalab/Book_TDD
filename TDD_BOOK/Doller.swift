@@ -10,10 +10,8 @@ import Foundation
 
 class Doller: Money {
 
-    private let amount: Int
-
-    init(amount: Int) {
-        self.amount = amount
+    override init(amount: Int) {
+        super.init(amount: amount)
     }
 
     func times(multiplier: Int) -> Doller {
@@ -21,10 +19,3 @@ class Doller: Money {
     }
 
 }
-
-extension Doller: Equatable {
-    static func ==(lhs: Doller, rhs: Doller) -> Bool {
-        return lhs.amount == rhs.amount
-    }
-}
-

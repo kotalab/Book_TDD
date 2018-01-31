@@ -9,5 +9,15 @@
 import Foundation
 
 class Money {
+    let amount: Int
 
+    init(amount: Int) {
+        self.amount = amount
+    }
+}
+
+extension Money: Equatable {
+    static func ==(lhs: Money, rhs: Money) -> Bool {
+        return lhs.amount == rhs.amount
+    }
 }

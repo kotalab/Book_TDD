@@ -10,21 +10,13 @@ import Foundation
 
 class Franc: Money {
 
-    private let amount: Int
-
-    init(amount: Int) {
-        self.amount = amount
+    override init(amount: Int) {
+        super.init(amount: amount)
     }
 
     func times(multiplier: Int) -> Franc {
         return Franc(amount: amount * multiplier)
     }
 
-}
-
-extension Franc: Equatable {
-    static func ==(lhs: Franc, rhs: Franc) -> Bool {
-        return lhs.amount == rhs.amount
-    }
 }
 
