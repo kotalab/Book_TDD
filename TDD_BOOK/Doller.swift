@@ -24,7 +24,7 @@ struct Doller {
 
 extension Doller: Equatable {
     static func ==(lhs: Doller, rhs: Doller) -> Bool {
-        return true
+        return lhs.amount == rhs.amount
     }
 }
 
