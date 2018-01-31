@@ -59,4 +59,11 @@ class TDD_BOOKTests: XCTestCase {
 
         XCTAssertEqual(Money.doller(amount: 7), result)
     }
+
+    func testReduceMoney() {
+        let bank = Bank()
+        let result = bank.reduce(source: Money.doller(amount: 1), to: "USD")
+
+        XCTAssertEqual(Money.doller(amount: 1), result)
+    }
 }
