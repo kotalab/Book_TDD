@@ -22,6 +22,10 @@ class Money {
     static func doller(amount: Int) -> Money {
         return Doller(amount: amount)
     }
+
+    static func franc(amount: Int) -> Money {
+        return Franc(amount: amount)
+    }
 }
 
 extension Money: Equatable {
