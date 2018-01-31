@@ -21,4 +21,8 @@ class TDD_BOOKTests: XCTestCase {
 
         XCTAssertEqual(15, product.amount)
     }
+
+    func testEquality() {
+        XCTAssertEqual(Doller(amount: 5), Doller(amount: 5))
+    }
 }
