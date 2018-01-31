@@ -10,6 +10,8 @@ import Foundation
 
 struct Bank {
     func reduce(source: Expression, to: String) -> Money {
-        return Money.doller(amount: 10)
+        let sum = source as! Sum
+
+        return sum.reduce(to)
     }
 }
