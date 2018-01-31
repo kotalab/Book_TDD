@@ -16,7 +16,11 @@ class Money {
     }
 
     func times(multiplier: Int) -> Money {
-        fatalError()
+        fatalError("need to override.")
+    }
+
+    func getCurrency() -> String {
+        fatalError("need to override.")
     }
 
     static func doller(amount: Int) -> Money {
