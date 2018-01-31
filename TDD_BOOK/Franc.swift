@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Franc {
+class Franc {
 
     private let amount: Int
 

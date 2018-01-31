@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Doller {
+class Doller {
 
     private let amount: Int
 
