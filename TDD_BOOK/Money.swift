@@ -36,6 +36,10 @@ class Money: Expression {
     func plus(_ addend: Money) -> Expression {
         return Sum(augend: self, addend: addend)
     }
+
+    func reduce(_ to: String) -> Money {
+        return self
+    }
 }
 
 extension Money: Equatable {

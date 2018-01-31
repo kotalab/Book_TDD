@@ -10,13 +10,6 @@ import Foundation
 
 struct Bank {
     func reduce(source: Expression, to: String) -> Money {
-
-        if let sum = source as? Money {
-            return sum
-        }
-
-        let sum = source as! Sum
-
-        return sum.reduce(to)
+        return source.reduce(to)
     }
 }
