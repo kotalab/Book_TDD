@@ -29,4 +29,10 @@ class TDD_BOOKTests: XCTestCase {
         XCTAssertEqual("USD", Money.doller(amount: 1).getCurrency())
         XCTAssertEqual("CHF", Money.franc(amount: 1).getCurrency())
     }
+
+    func testSimpleAddition() {
+        let sum = Money.doller(amount: 5).plus(Money.doller(amount: 5))
+
+        XCTAssertEqual(Money.doller(amount: 10), sum)
+    }
 }
