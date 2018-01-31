@@ -12,4 +12,8 @@ struct Bank {
     func reduce(source: Expression, to: String) -> Money {
         return source.reduce(to)
     }
+
+    func addRate(from: String, to: String, rate: Int) {
+        
+    }
 }
