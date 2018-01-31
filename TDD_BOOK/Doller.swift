@@ -10,14 +10,14 @@ import Foundation
 
 struct Doller {
 
-    var amount: Int
+    let amount: Int
 
     init(amount: Int) {
         self.amount = amount
     }
 
-    mutating func times(multiplier: Int) {
-        amount *= multiplier
+    func times(multiplier: Int) -> Doller {
+        return Doller(amount: amount * multiplier)
     }
 
 }
