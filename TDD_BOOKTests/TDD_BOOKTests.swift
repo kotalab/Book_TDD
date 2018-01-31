@@ -24,7 +24,7 @@ class TDD_BOOKTests: XCTestCase {
         XCTAssertEqual(Money.franc(amount: 5), Money.franc(amount: 5))
         XCTAssertNotEqual(Money.franc(amount: 5), Money.franc(amount: 6))
 
-        XCTAssertNotEqual(Franc(amount: 5), Money.doller(amount: 5))
+        XCTAssertNotEqual(Money.franc(amount: 5), Money.doller(amount: 5))
     }
 
     func testFrancMultiplication() {

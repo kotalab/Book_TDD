@@ -26,11 +26,11 @@ class Money {
     }
 
     static func doller(amount: Int) -> Money {
-        return Doller(amount: amount)
+        return Doller(amount: amount, currency: "USD")
     }
 
     static func franc(amount: Int) -> Money {
-        return Franc(amount: amount)
+        return Franc(amount: amount, currency: "CHF")
     }
 }
 
