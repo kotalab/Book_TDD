@@ -24,5 +24,6 @@ class TDD_BOOKTests: XCTestCase {
 
     func testEquality() {
         XCTAssertEqual(Doller(amount: 5), Doller(amount: 5))
+        XCTAssertNotEqual(Doller(amount: 5), Doller(amount: 6))
     }
 }
