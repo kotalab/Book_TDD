@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C2BEE903202190BC00CEDCAC /* Franc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BEE902202190BC00CEDCAC /* Franc.swift */; };
 		C2BEE905202191F500CEDCAC /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BEE904202191F500CEDCAC /* Money.swift */; };
 		C2C0F1B320215FBC003687CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C0F1B220215FBC003687CD /* AppDelegate.swift */; };
 		C2C0F1B520215FBC003687CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C0F1B420215FBC003687CD /* ViewController.swift */; };
@@ -15,7 +14,6 @@
 		C2C0F1BA20215FBC003687CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C0F1B920215FBC003687CD /* Assets.xcassets */; };
 		C2C0F1BD20215FBC003687CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C0F1BB20215FBC003687CD /* LaunchScreen.storyboard */; };
 		C2C0F1CB2021632F003687CD /* TDD_BOOKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C0F1CA2021632F003687CD /* TDD_BOOKTests.swift */; };
-		C2C0F1D320216576003687CD /* Doller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C0F1D220216576003687CD /* Doller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C2BEE902202190BC00CEDCAC /* Franc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Franc.swift; sourceTree = "<group>"; };
 		C2BEE904202191F500CEDCAC /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 		C2C0F1AF20215FBC003687CD /* TDD_BOOK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDD_BOOK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C0F1B220215FBC003687CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +38,6 @@
 		C2C0F1C82021632F003687CD /* TDD_BOOKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDD_BOOKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C0F1CA2021632F003687CD /* TDD_BOOKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDD_BOOKTests.swift; sourceTree = "<group>"; };
 		C2C0F1CC2021632F003687CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2C0F1D220216576003687CD /* Doller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +82,6 @@
 				C2C0F1B220215FBC003687CD /* AppDelegate.swift */,
 				C2C0F1B420215FBC003687CD /* ViewController.swift */,
 				C2BEE904202191F500CEDCAC /* Money.swift */,
-				C2C0F1D220216576003687CD /* Doller.swift */,
-				C2BEE902202190BC00CEDCAC /* Franc.swift */,
 				C2C0F1B620215FBC003687CD /* Main.storyboard */,
 				C2C0F1B920215FBC003687CD /* Assets.xcassets */,
 				C2C0F1BB20215FBC003687CD /* LaunchScreen.storyboard */,
@@ -208,9 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2BEE903202190BC00CEDCAC /* Franc.swift in Sources */,
 				C2BEE905202191F500CEDCAC /* Money.swift in Sources */,
-				C2C0F1D320216576003687CD /* Doller.swift in Sources */,
 				C2C0F1B520215FBC003687CD /* ViewController.swift in Sources */,
 				C2C0F1B320215FBC003687CD /* AppDelegate.swift in Sources */,
 			);

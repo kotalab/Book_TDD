@@ -21,8 +21,6 @@ class TDD_BOOKTests: XCTestCase {
     func testEquality() {
         XCTAssertEqual(Money.doller(amount: 5), Money.doller(amount: 5))
         XCTAssertNotEqual(Money.doller(amount: 5), Money.doller(amount: 6))
-        XCTAssertEqual(Money.franc(amount: 5), Money.franc(amount: 5))
-        XCTAssertNotEqual(Money.franc(amount: 5), Money.franc(amount: 6))
 
         XCTAssertNotEqual(Money.franc(amount: 5), Money.doller(amount: 5))
     }
@@ -37,9 +35,5 @@ class TDD_BOOKTests: XCTestCase {
     func testCurrency() {
         XCTAssertEqual("USD", Money.doller(amount: 1).getCurrency())
         XCTAssertEqual("CHF", Money.franc(amount: 1).getCurrency())
-    }
-
-    func testDifferentClassEquality() {
-        XCTAssertEqual(Money(amount: 10, currency: "CHF"), Franc(amount: 10, currency: "CHF"))
     }
 }
