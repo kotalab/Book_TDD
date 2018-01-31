@@ -10,11 +10,11 @@ import Foundation
 
 class Doller: Money {
 
-    init(amount: Int) {
-        super.init(amount: amount, currency: "USD")
+    override init(amount: Int, currency: String = "USD") {
+        super.init(amount: amount, currency: currency)
     }
 
     override func times(multiplier: Int) -> Money {
-        return Doller(amount: amount * multiplier)
+        return Money.doller(amount: amount * multiplier)
     }
 }
