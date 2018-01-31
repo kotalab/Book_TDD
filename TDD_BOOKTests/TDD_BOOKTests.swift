@@ -40,4 +40,14 @@ class TDD_BOOKTests: XCTestCase {
 
         XCTAssertEqual(Money.doller(amount: 10), reduced)
     }
+
+    func testPlusResultSum() {
+        let five = Money.doller(amount: 5)
+        let result = five.plus(five)
+
+        let sum = result as! Sum
+
+        XCTAssertEqual(five, sum.augend)
+        XCTAssertEqual(five, sum.addend)
+    }
 }
