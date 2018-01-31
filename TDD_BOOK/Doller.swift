@@ -9,18 +9,12 @@
 import Foundation
 
 class Doller: Money {
-    private let currency: String
 
-    override init(amount: Int) {
-        currency = "USD"
-        super.init(amount: amount)
+    init(amount: Int) {
+        super.init(amount: amount, currency: "USD")
     }
 
     override func times(multiplier: Int) -> Money {
         return Doller(amount: amount * multiplier)
-    }
-
-    override func getCurrency() -> String {
-        return currency
     }
 }

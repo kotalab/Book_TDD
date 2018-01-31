@@ -10,9 +10,11 @@ import Foundation
 
 class Money {
     let amount: Int
+    let currency: String
 
-    init(amount: Int) {
+    init(amount: Int, currency: String) {
         self.amount = amount
+        self.currency = currency
     }
 
     func times(multiplier: Int) -> Money {
@@ -20,7 +22,7 @@ class Money {
     }
 
     func getCurrency() -> String {
-        fatalError("need to override.")
+        return currency
     }
 
     static func doller(amount: Int) -> Money {
