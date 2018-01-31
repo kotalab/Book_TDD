@@ -37,8 +37,8 @@ class Money: Expression {
         return Sum(augend: self, addend: addend)
     }
 
-    func reduce(_ to: String) -> Money {
-        let rate = currency == "CHF" && to == "USD" ? 2 : 1
+    func reduce(_ bank: Bank, to: String) -> Money {
+        let rate = bank.rate(from: currency, to: to)
         return Money(amount: amount / rate, currency: to)
     }
 }

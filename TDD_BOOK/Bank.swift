@@ -10,10 +10,13 @@ import Foundation
 
 struct Bank {
     func reduce(source: Expression, to: String) -> Money {
-        return source.reduce(to)
+        return source.reduce(self, to: to)
     }
 
     func addRate(from: String, to: String, rate: Int) {
-        
+    }
+
+    func rate(from: String, to: String) -> Int {
+        return from == "CHF" && to == "USD" ? 2 : 1
     }
 }
