@@ -18,7 +18,7 @@ class Money {
     }
 
     func times(multiplier: Int) -> Money {
-        fatalError("need to override.")
+        return Money(amount: amount * multiplier, currency: currency)
     }
 
     func getCurrency() -> String {

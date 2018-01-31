@@ -13,8 +13,4 @@ class Doller: Money {
     override init(amount: Int, currency: String) {
         super.init(amount: amount, currency: currency)
     }
-
-    override func times(multiplier: Int) -> Money {
-        return Money(amount: amount * multiplier, currency: currency)
-    }
 }
