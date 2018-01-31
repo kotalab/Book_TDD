@@ -34,7 +34,7 @@ class Money: Expression {
     }
 
     func plus(_ addend: Money) -> Expression {
-        return Money(amount: amount + addend.amount, currency: currency)
+        return Sum(augend: self, addend: addend)
     }
 }
 

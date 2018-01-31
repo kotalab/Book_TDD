@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Sum {
+struct Sum: Expression {
     let augend: Money
     let addend: Money
 }
