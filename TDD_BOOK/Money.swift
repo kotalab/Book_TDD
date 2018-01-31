@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Money {
+class Money: Expression {
     let amount: Int
     let currency: String
 
@@ -31,6 +31,10 @@ class Money {
 
     static func franc(amount: Int) -> Money {
         return Money(amount: amount, currency: "CHF")
+    }
+
+    func plus(_ addend: Money) -> Expression {
+        return Money(amount: amount + addend.amount, currency: currency)
     }
 }
 

@@ -31,8 +31,13 @@ class TDD_BOOKTests: XCTestCase {
     }
 
     func testSimpleAddition() {
-        let sum = Money.doller(amount: 5).plus(Money.doller(amount: 5))
 
-        XCTAssertEqual(Money.doller(amount: 10), sum)
+        let five = Money.doller(amount: 5)
+        let sum = five.plus(five)
+
+        let bank = Bank()
+        let reduced = bank.reduce(source: sum, to: "USD")
+
+        XCTAssertEqual(Money.doller(amount: 10), reduced)
     }
 }
