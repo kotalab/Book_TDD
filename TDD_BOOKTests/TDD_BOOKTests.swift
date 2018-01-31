@@ -14,17 +14,17 @@ class TDD_BOOKTests: XCTestCase {
     func testMultiplication() {
         let five = Money.doller(amount: 5)
 
-        XCTAssertEqual(Doller(amount: 10), five.times(multiplier: 2))
-        XCTAssertEqual(Doller(amount: 15), five.times(multiplier: 3))
+        XCTAssertEqual(Money.doller(amount: 10), five.times(multiplier: 2))
+        XCTAssertEqual(Money.doller(amount: 15), five.times(multiplier: 3))
     }
 
     func testEquality() {
-        XCTAssertEqual(Doller(amount: 5), Doller(amount: 5))
-        XCTAssertNotEqual(Doller(amount: 5), Doller(amount: 6))
+        XCTAssertEqual(Money.doller(amount: 5), Money.doller(amount: 5))
+        XCTAssertNotEqual(Money.doller(amount: 5), Money.doller(amount: 6))
         XCTAssertEqual(Franc(amount: 5), Franc(amount: 5))
         XCTAssertNotEqual(Franc(amount: 5), Franc(amount: 6))
 
-        XCTAssertNotEqual(Franc(amount: 5), Doller(amount: 5))
+        XCTAssertNotEqual(Franc(amount: 5), Money.doller(amount: 5))
     }
 
     func testFrancMultiplication() {

@@ -14,7 +14,7 @@ class Franc: Money {
         super.init(amount: amount)
     }
 
-    func times(multiplier: Int) -> Money {
+    override func times(multiplier: Int) -> Money {
         return Franc(amount: amount * multiplier)
     }
 

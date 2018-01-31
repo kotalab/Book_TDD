@@ -15,7 +15,11 @@ class Money {
         self.amount = amount
     }
 
-    static func doller(amount: Int) -> Doller {
+    func times(multiplier: Int) -> Money {
+        fatalError()
+    }
+
+    static func doller(amount: Int) -> Money {
         return Doller(amount: amount)
     }
 }
