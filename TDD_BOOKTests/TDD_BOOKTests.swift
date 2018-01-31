@@ -12,14 +12,10 @@ import XCTest
 class TDD_BOOKTests: XCTestCase {
     
     func testMultiplication() {
-        var five = Doller(amount: 5)
-        var product: Doller = five.times(multiplier: 2)
+        let five = Doller(amount: 5)
 
-        XCTAssertEqual(10, product.amount)
-
-        product = five.times(multiplier: 3)
-
-        XCTAssertEqual(15, product.amount)
+        XCTAssertEqual(Doller(amount: 10), five.times(multiplier: 2))
+        XCTAssertEqual(Doller(amount: 15), five.times(multiplier: 3))
     }
 
     func testEquality() {

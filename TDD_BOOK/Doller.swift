@@ -10,7 +10,7 @@ import Foundation
 
 struct Doller {
 
-    let amount: Int
+    private let amount: Int
 
     init(amount: Int) {
         self.amount = amount
