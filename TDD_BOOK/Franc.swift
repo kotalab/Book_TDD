@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Franc {
+class Franc: Money {
 
     private let amount: Int
 

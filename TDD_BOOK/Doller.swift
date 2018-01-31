@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Doller {
+class Doller: Money {
 
     private let amount: Int
 
