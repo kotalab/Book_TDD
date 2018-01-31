@@ -38,4 +38,8 @@ class TDD_BOOKTests: XCTestCase {
         XCTAssertEqual("USD", Money.doller(amount: 1).getCurrency())
         XCTAssertEqual("CHF", Money.franc(amount: 1).getCurrency())
     }
+
+    func testDifferentClassEquality() {
+        XCTAssertEqual(Money(amount: 10, currency: "CHF"), Franc(amount: 10, currency: "CHF"))
+    }
 }
