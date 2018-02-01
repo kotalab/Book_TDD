@@ -14,8 +14,8 @@ class TDD_BOOKTests: XCTestCase {
     func testMultiplication() {
         let five = Money.doller(amount: 5)
 
-        XCTAssertEqual(Money.doller(amount: 10), five.times(multiplier: 2))
-        XCTAssertEqual(Money.doller(amount: 15), five.times(multiplier: 3))
+        XCTAssertEqual(Money.doller(amount: 10), five.times(multiplier: 2) as! Money)
+        XCTAssertEqual(Money.doller(amount: 15), five.times(multiplier: 3) as! Money)
     }
 
     func testEquality() {
@@ -47,8 +47,8 @@ class TDD_BOOKTests: XCTestCase {
 
         let sum = result as! Sum
 
-        XCTAssertEqual(five, sum.augend)
-        XCTAssertEqual(five, sum.addend)
+        XCTAssertEqual(five, sum.augend as! Money)
+        XCTAssertEqual(five, sum.addend as! Money)
     }
 
     func testReduceSum() {
@@ -78,5 +78,17 @@ class TDD_BOOKTests: XCTestCase {
 
     func testIdentityRate() {
         XCTAssertEqual(1, Bank().rate(from: "USD", to: "USD"))
+    }
+
+    func testMixedAddition() {
+        let fiveBucks = Money.doller(amount: 5)
+        let tenFrancs = Money.franc(amount: 10)
+        var bank = Bank()
+
+        bank.addRate(from: "CHF", to: "USD", rate: 2)
+
+        let result = bank.reduce(source: fiveBucks.plus(tenFrancs), to: "USD")
+
+        XCTAssertEqual(Money.doller(amount: 10), result)
     }
 }

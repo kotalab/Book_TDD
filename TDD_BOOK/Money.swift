@@ -17,7 +17,7 @@ class Money: Expression {
         self.currency = currency
     }
 
-    func times(multiplier: Int) -> Money {
+    func times(multiplier: Int) -> Expression {
         return Money(amount: amount * multiplier, currency: currency)
     }
 
@@ -33,7 +33,7 @@ class Money: Expression {
         return Money(amount: amount, currency: "CHF")
     }
 
-    func plus(_ addend: Money) -> Expression {
+    func plus(_ addend: Expression) -> Expression {
         return Sum(augend: self, addend: addend)
     }
 

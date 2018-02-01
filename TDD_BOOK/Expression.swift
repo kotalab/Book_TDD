@@ -10,4 +10,5 @@ import Foundation
 
 protocol Expression {
     func reduce(_ bank: Bank, to: String) -> Money
+    func plus(_ addend: Expression) -> Expression
 }
