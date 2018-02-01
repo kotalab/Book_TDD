@@ -9,16 +9,20 @@
 import Foundation
 
 struct Sum: Expression {
+    let augend: Expression
+    let addend: Expression
+
     func plus(_ addend: Expression) -> Expression {
         return Sum(augend: self, addend: addend)
     }
-
-    let augend: Expression
-    let addend: Expression
 
     func reduce(_ bank: Bank, to: String) -> Money {
         let amount = augend.reduce(bank, to: to).amount + addend.reduce(bank, to: to).amount
 
         return Money(amount: amount, currency: to)
+    }
+
+    func times(multiplier: Int) -> Expression {
+        return Sum(augend: augend.times(multiplier: multiplier), addend: addend.times(multiplier: multiplier))
     }
 }

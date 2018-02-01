@@ -104,4 +104,18 @@ class TDD_BOOKTests: XCTestCase {
 
         XCTAssertEqual(Money.doller(amount: 15), result)
     }
+
+    func testSumTimes() {
+        let fiveBucks = Money.doller(amount: 5)
+        let tenFrancs = Money.franc(amount: 10)
+        var bank = Bank()
+
+        bank.addRate(from: "CHF", to: "USD", rate: 2)
+
+        let sum = Sum(augend: fiveBucks, addend: tenFrancs).times(2)
+        let result = bank.reduce(source: sum, to: "USD")
+
+        XCTAssertEqual(Money.doller(amount: 20), result)
+
+    }
 }
