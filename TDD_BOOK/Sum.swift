@@ -10,7 +10,7 @@ import Foundation
 
 struct Sum: Expression {
     func plus(_ addend: Expression) -> Expression {
-        return addend
+        return Sum(augend: self, addend: addend)
     }
 
     let augend: Expression
