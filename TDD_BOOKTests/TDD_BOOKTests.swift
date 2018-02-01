@@ -112,10 +112,10 @@ class TDD_BOOKTests: XCTestCase {
 
         bank.addRate(from: "CHF", to: "USD", rate: 2)
 
-        let sum = Sum(augend: fiveBucks, addend: tenFrancs).times(2)
+        let sum = Sum(augend: fiveBucks, addend: tenFrancs).times(multiplier: 2)
         let result = bank.reduce(source: sum, to: "USD")
 
         XCTAssertEqual(Money.doller(amount: 20), result)
-
     }
+
 }
