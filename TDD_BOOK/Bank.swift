@@ -9,14 +9,19 @@
 import Foundation
 
 struct Bank {
+    private var rates: [Pair: Int] = [:]
+
     func reduce(source: Expression, to: String) -> Money {
         return source.reduce(self, to: to)
     }
 
-    func addRate(from: String, to: String, rate: Int) {
+    mutating func addRate(from: String, to: String, rate: Int) {
+        rates[Pair(from: from, to: to)] = rate
     }
 
     func rate(from: String, to: String) -> Int {
-        return from == "CHF" && to == "USD" ? 2 : 1
+        if from == to { return 1 }
+
+        return rates[Pair(from: from, to: to)]!
     }
 }
